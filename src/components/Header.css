@@ -54,7 +54,8 @@ button:hover {
     padding: 10px;
   }
 
-  .name-header, .btn-header {
+  .name-header,
+  .btn-header {
     width: 100%; /* Make each section take full width */
     flex-direction: column; /* Stack elements vertically */
     text-align: center;
@@ -80,11 +81,10 @@ button:hover {
   }
 }
 
-
 .card {
   /* border: 2px solid black; */
   width: 380px;
-  height: 530px;
+  /* height: 530px; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -95,11 +95,12 @@ button:hover {
 }
 
 .all-container {
-  height: 70vh;
+  /* height: 70vh; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Ensures cards are evenly spaced */
   align-items: center;
+  /* border: 2px solid black; */
 }
 
 .card-holder2 {
@@ -113,8 +114,6 @@ button:hover {
   align-items: center;
   position: relative; /* Changed to relative to prevent overlapping */
 }
-
-
 
 .card-holder2 span {
   font-size: 100px;
@@ -184,4 +183,95 @@ button:hover {
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .card{
+    height: auto;
+  }
+}
+
+/* Experience Section */
+
+.work-experience-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  /* border: 2px solid black; */
+  /* height: 100vh; */
+}
+
+.work-experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: center; */
+  align-items: center;
+  h2 {
+    font-size: 40px;
+  }
+}
+.bluestock-fintech-container {
+  margin: 20px;
+  /* border: 2px solid black; */
+  width: 550px;
+  height: 560px;
+  padding: 10px;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  h2 {
+    font-size: 30px;
+  }
+}
+
+.work-experience-container-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .work-experience-container-all{
+    flex-direction: column;
+    width: 90%;
+  }
+  .bluestock-fintech-container {
+    width: 90%; /* Adjust width to fit smaller screens */
+    height: auto; /* Allow flexible height */
+    padding: 15px;
+  }
+
+  .work-experience-container h2 {
+    font-size: 35px; /* Reduce font size for better fit */
+  }
+
+  .bluestock-fintech-container h2 {
+    font-size: 25px; /* Adjust heading font size */
+  }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+  .bluestock-fintech-container {
+    width: 100%; /* Full width on small screens */
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    gap: 5px;
+    border-radius: 15px; /* Slightly smaller border radius */
+  }
+
+  .work-experience-container h2 {
+    font-size: 28px; /* Further reduce font size */
+  }
+
+  .bluestock-fintech-container h2 {
+    font-size: 22px; /* Reduce heading font size */
+    text-align: center;
+  }
 }
