@@ -46,6 +46,14 @@ button:hover {
   background-color: skyblue;
 }
 
+.btn-header>button>a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 /* Media query for tablets (768px and below) */
 @media (max-width: 768px) {
   .header-container {
@@ -255,5 +263,52 @@ button:hover {
 
   .bluestock-fintech-container h2 {
     text-align: center;
+  }
+}
+
+.dropdown-toggle {
+  /* display: none; */
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.dropdown-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: 50%;
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.dropdown-menu.open {
+  max-height: 300px; /* Adjust as needed */
+}
+
+.dropdown-menu button {
+  margin: 12px;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  background: none;
+}
+
+.dropdown-menu button:hover {
+  background-color: #b9b9b9;
+}
+
+@media (max-width: 768px) {
+  .dropdown-toggle {
+    display: block;
+  }
+
+  .btn-header > button {
+    /* display: none; */
   }
 }
