@@ -214,6 +214,10 @@ button:hover {
     font-size: 40px;
   }
 }
+
+.work-experience-container>h2{
+  font-size: 40px;
+}
 .bluestock-fintech-container {
   margin: 20px;
   /* border: 2px solid black; */
@@ -264,6 +268,13 @@ button:hover {
     margin: 10px;
     gap: 5px;
     border-radius: 15px; /* Slightly smaller border radius */
+  }
+
+  h2{
+    font-size: 16px;
+  }
+  p{
+    font-size: 12px;
   }
 
   .work-experience-container h2 {
