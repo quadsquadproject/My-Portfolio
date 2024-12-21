@@ -1,25 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 const NavBar = () => {
-
   const [isMobile, setIsMobile] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  useEffect(()=>{
+  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  })
+  });
 
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
+  const handleDropDown = () => {
+    setIsDropdownOpen(false);
+  };
 
-  console.log(isMobile)
+  console.log(isMobile);
   return (
     <div>
       <div className="header-container">
@@ -29,8 +31,8 @@ const NavBar = () => {
           <h3>Software Developer Engineer</h3>
         </div>
         <div className="btn-header">
-        {isMobile ? (
-          <>
+          {isMobile ? (
+            <>
               <button className="dropdown-toggle" onClick={toggleDropdown}>
                 ☰
               </button>
@@ -39,61 +41,77 @@ const NavBar = () => {
                 role="menu"
               >
                 <button>
-                  <Link className="link-style" to="/">
+                  <Link className="link-style" to="/" onClick={handleDropDown}>
                     Home
                   </Link>
                 </button>
                 <button>
-                  <Link className="link-style" to="/about">
+                  <Link
+                    className="link-style"
+                    to="/about"
+                    onClick={handleDropDown}
+                  >
                     About Me
                   </Link>
                 </button>
                 <button>
-                  <Link className="link-style" to="/resume">
+                  <Link
+                    className="link-style"
+                    to="/resume"
+                    onClick={handleDropDown}
+                  >
                     Resume
                   </Link>
                 </button>
                 <button>
-                  <Link className="link-style" to="/projects">
+                  <Link
+                    className="link-style"
+                    to="/projects"
+                    onClick={handleDropDown}
+                  >
                     Projects
                   </Link>
                 </button>
                 <button>
-                  <Link className="link-style" to="/contact">
+                  <Link
+                    className="link-style"
+                    to="/contact"
+                    onClick={handleDropDown}
+                  >
                     Contact
                   </Link>
                 </button>
               </div>
             </>
-        ): (
-          <>
-          <button>
-            <Link className="link-style" to="/">
-              Home
-            </Link>
-          </button>
-          <button>
-            <Link className="link-style" to="/about">
-              About Me
-            </Link>
-          </button>
-          <button>
-            <Link className="link-style" to="/resume">
-              Resume
-            </Link>
-          </button>
-          <button>
-            <Link className="link-style" to="/projects">
-              Projects
-            </Link>
-          </button>
-          <button>
-            <Link className="link-style" to="/contact">
-              Contact
-            </Link>
-          </button>
-          </>
-        )}
+          ) : (
+            <>
+              <button>
+                <Link className="link-style" to="/">
+                  Home
+                </Link>
+              </button>
+              <button>
+                <Link className="link-style" to="/about">
+                  About Me
+                </Link>
+              </button>
+              <button>
+                <Link className="link-style" to="/resume">
+                  Resume
+                </Link>
+              </button>
+              <button>
+                <Link className="link-style" to="/projects">
+                  Projects
+                </Link>
+              </button>
+              <button>
+                <Link className="link-style" to="/contact">
+                  Contact
+                </Link>
+              </button>
+            </>
+          )}
         </div>
       </div>
     </div>
