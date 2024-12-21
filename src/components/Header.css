@@ -1,0 +1,187 @@
+.header-container {
+  height: 200px;
+  display: flex;
+  flex-direction: column; /* Changes direction on smaller screens */
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.name-header {
+  height: auto;
+  width: 100%; /* Takes full width on smaller screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-header {
+  height: auto;
+  width: 100%; /* Takes full width on smaller screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-header button {
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  color: black;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.5s;
+  width: 105px;
+  height: 45px;
+  border-radius: 20px;
+}
+
+.link-style {
+  color: black;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: skyblue;
+}
+
+/* Media query for tablets (768px and below) */
+@media (max-width: 768px) {
+  .header-container {
+    height: auto; /* Adjusts height for smaller screens */
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .name-header, .btn-header {
+    width: 100%; /* Make each section take full width */
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+  }
+
+  .btn-header button {
+    width: 90%; /* Adjust button width for smaller screens */
+    font-size: 16px;
+    margin: 10px 0;
+  }
+}
+
+/* Media query for mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 5px;
+  }
+
+  .btn-header button {
+    width: 100%; /* Full width for buttons on mobile */
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+.card {
+  /* border: 2px solid black; */
+  width: 380px;
+  height: 530px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: antiquewhite;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  justify-content: space-evenly;
+  margin: 10px; /* Adds spacing between cards */
+}
+
+.all-container {
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensures cards are evenly spaced */
+  align-items: center;
+}
+
+.card-holder2 {
+  /* border: 2px solid black; */
+  width: 380px;
+  height: 530px;
+  margin: 10px; /* Adds spacing between cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Changed to relative to prevent overlapping */
+}
+
+
+
+.card-holder2 span {
+  font-size: 100px;
+  font-weight: bold;
+  /* font: var(--font_0); */
+}
+
+.card-holder2 p {
+  font-size: 20px;
+  /* font-weight: bold; */
+  /* font: var(--font_0); */
+  letter-spacing: normal;
+  line-height: normal;
+  margin: 10px;
+}
+
+.card-holder2 button {
+  padding: 10px 20px;
+  background-color: none;
+  border: none;
+  background-color: white;
+  color: black;
+  /* border: 2px solid black; */
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.5s;
+  /* border: 2px solid black; */
+  width: 105px;
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.link-deco {
+  color: black;
+  line-break: none;
+  text-decoration: none;
+}
+
+.description-container p {
+  font-size: 15px;
+  margin: 20px 10px;
+}
+.img-container {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name-container h2 {
+  margin-top: 5px;
+  text-decoration: underline 2px solid blue;
+  text-align: center;
+}
+
+.name-container p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
