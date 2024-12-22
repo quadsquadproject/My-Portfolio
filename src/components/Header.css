@@ -4,7 +4,8 @@
   flex-direction: column; /* Changes direction on smaller screens */
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
+  background-image: linear-gradient(-100deg, #1a0b2e, #763cac);
+  color: white;
 }
 
 .name-header {
@@ -46,7 +47,7 @@ button:hover {
   background-color: skyblue;
 }
 
-.btn-header>button>a{
+.btn-header > button > a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,14 +93,16 @@ button:hover {
 .card {
   /* border: 2px solid black; */
   width: 380px;
-  /* height: 530px; */
+  height: 530px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: antiquewhite;
+  background-color: #4f207a;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   justify-content: space-evenly;
   margin: 10px; /* Adds spacing between cards */
+  color: white;
+  border-radius: 20px;
 }
 
 .all-container {
@@ -172,6 +175,8 @@ button:hover {
   height: 300px;
   overflow: hidden;
   position: relative;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .img-container img {
@@ -193,12 +198,6 @@ button:hover {
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
-  .card {
-    height: auto;
-  }
-}
-
 /* Experience Section */
 
 .work-experience-container {
@@ -207,9 +206,14 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
+  background-image: linear-gradient(-100deg, #1a0b2e, #763cac);
   /* border: 2px solid black; */
   /* height: 100vh; */
+  padding-top: 50px;
+  h1 {
+    color: white;
+    font-size: 40px;
+  }
 }
 
 .work-experience-container {
@@ -230,6 +234,22 @@ button:hover {
   gap: 10px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-image: url('../Image/stock-market-graph-forex-trading-chart-business-financial-concepts-reports-investment-grey-background-vector-illustration_87788-415.avif');
+}
+
+.bharath-electronics-container {
+  margin: 20px;
+  /* border: 2px solid black; */
+  width: 550px;
+  height: 560px;
+  padding: 10px;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-image: url('../Image/bharat_electronics_limited_logo.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .work-experience-container-all {
@@ -248,6 +268,11 @@ button:hover {
     height: auto; /* Allow flexible height */
     padding: 15px;
   }
+  .bharath-electronics-container{
+    width: 90%; /* Adjust width to fit smaller screens */
+    height: auto; /* Allow flexible height */
+    padding: 15px;
+  }
 }
 
 /* Mobile View (480px and below) */
@@ -260,8 +285,19 @@ button:hover {
     gap: 5px;
     border-radius: 15px; /* Slightly smaller border radius */
   }
+  .bharath-electronics-container{
+    width: 100%; /* Full width on small screens */
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    gap: 5px;
+    border-radius: 15px;
+  }
 
   .bluestock-fintech-container h2 {
+    text-align: center;
+  }
+  .bharath-electronics-container h2{
     text-align: center;
   }
 }
@@ -311,4 +347,170 @@ button:hover {
   .btn-header > button {
     /* display: none; */
   }
+}
+
+/* Skill container*/
+
+.skills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0px 10px;
+  text-align: center;
+  /* background-image: linear-gradient(-100deg, #1a0b2e, #763cac); */
+
+}
+
+
+.span-1{
+  font-size: 40px;
+  font-family: 'cursive';
+  
+}
+
+.span-2{
+  font-size: 30px;
+  font-family: 'cursive';
+}
+
+@media (max-width: 480px) {
+ .span-1{
+    font-size: 23px;
+  }
+  .span-2{
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .span-1{
+    font-size: 40px;
+  }
+}
+
+
+/* Language Container */
+.lang-logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 50px;
+  
+}
+
+.lang-logo{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+  border-radius: 50%;
+}
+
+.lang-React{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+  border-radius: 50%;
+}
+
+.lang-React img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.lang-CPP{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+  border-radius: 50%;
+}
+
+.lang-CPP img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.lang-logo img{
+  width: 80%;
+  height: 80%;
+  /* border-radius: 50%; */
+  object-fit: fill;
+}
+
+.project-overview{
+  border: 2px solid black;
+  /* height: 100vh; */
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-overview-container{
+  width: 80%;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.project-overview-left-container{
+  width: 50%;
+  /* border: 2px solid red; */
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 20px;
+  flex-direction: column;
+  label{
+    font-size: 20px;
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+    color: #763cac;
+  }
+  p{
+    /* border: 2px solid green; */
+    position: relative;
+    right: -60px;
+    font-size: large;
+    background-image: linear-gradient(-100deg, #1a0b2e, #763cac);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    /* width: 300px; */
+    /* height: 200px; */
+  }
+}
+
+.project-overview-right-container{
+  width: 50%;
+  /* border: 2px solid black; */
+}
+
+.proj-1{
+  width: 100%;
+  height: 400px;
+  padding: 30px;
+}
+
+.proj-1 img{
+  width: 100%;
+  height: 100%;
 }
