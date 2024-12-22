@@ -7,7 +7,8 @@ import EXPRESS from "../Image/express-js.png";
 import MONGO from "../Image/mongodb.webp";
 import NODE from "../Image/mongodb.webp";
 import CPP from "../Image/c++.png";
-import PROJ1 from '../Image/Screenshot from 2024-12-22 17-21-54.png';
+import PROJ1 from "../Image/Screenshot from 2024-12-22 17-21-54.png";
+import PROJ2 from "../Image/Screenshot from 2024-12-22 17-50-34.png";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -187,56 +188,59 @@ const Header = () => {
       </section>
       <section className="project-overview">
         <div className="project-overview-container">
-        <div className="project-overview-left-container">
-          <div>
-            <h3 style={{fontSize: 'bold'}}>Featured Project</h3>
-            <label>High Quality Image Search</label>
+        <h1>Project 1</h1>
+          <div className="project-overview-left-container">
+          
+            <div>
+              <h3 style={{ fontSize: "bold" }}>Featured Project</h3>
+              <label>High Quality Image Search</label>
+            </div>
+            <br />
+            <div className="project-para">
+              <p>
+                Spearheaded the development of a highly efficient image search
+                application using ReactJS and the Unsplash API.This application
+                allows users to search for and access a wide range of
+                high-quality images contributed by photographers. Key features
+                include a user-friendly search interface, responsive design for
+                different devices, seamless integration with the Unsplash API
+                for image retrieval, and the ability for users to download
+                images with proper attribution.
+              </p>
+            </div>
           </div>
-          <br />
-          <div className="project-para">
-            <p>
-              Spearheaded the development of a highly efficient image search
-              application using ReactJS and the Unsplash API.This application
-              allows users to search for and access a wide range of high-quality
-              images contributed by photographers. Key features include a
-              user-friendly search interface, responsive design for different
-              devices, seamless integration with the Unsplash API for image
-              retrieval, and the ability for users to download images with
-              proper attribution.
-            </p>
+          <div className="project-overview-right-container">
+            <div className="proj-1">
+              <img src={PROJ1} alt="Project 1" />
+            </div>
           </div>
-        </div>
-        <div className="project-overview-right-container">
-          <div className="proj-1">
-            <img src={PROJ1} alt="Project 1"/>
-          </div>
-        </div>
         </div>
         <div className="project-overview-container">
-        <div className="project-overview-left-container">
-          <div>
-            <h3 style={{fontSize: 'bold'}}>Featured Project</h3>
-            <label>High Quality Image Search</label>
+        <h1>Project 2</h1>
+          <div className="project-overview-right-container">
+            <div className="proj-1">
+              <img src={PROJ2} alt="Project 1" />
+            </div>
           </div>
-          <br />
-          <div className="project-para">
-            <p>
-              Spearheaded the development of a highly efficient image search
-              application using ReactJS and the Unsplash API.This application
-              allows users to search for and access a wide range of high-quality
-              images contributed by photographers. Key features include a
-              user-friendly search interface, responsive design for different
-              devices, seamless integration with the Unsplash API for image
-              retrieval, and the ability for users to download images with
-              proper attribution.
-            </p>
+          <div className="project-overview-left-container">
+            <div>
+              <h3 style={{ fontSize: "bold" }}>Featured Project</h3>
+              <label>Movie Search App</label>
+            </div>
+            <br />
+            <div className="project-para-2">
+              <p>
+                Spearheaded the development of a highly efficient image search
+                application using ReactJS and the Unsplash API.This application
+                allows users to search for and access a wide range of
+                high-quality images contributed by photographers. Key features
+                include a user-friendly search interface, responsive design for
+                different devices, seamless integration with the Unsplash API
+                for image retrieval, and the ability for users to download
+                images with proper attribution.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="project-overview-right-container">
-          <div className="proj-1">
-            <img src={PROJ1} alt="Project 1"/>
-          </div>
-        </div>
         </div>
       </section>
     </div>
