@@ -103,7 +103,7 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   justify-content: space-evenly;
   margin: 10px; /* Adds spacing between cards */
-  /* color: white; */
+  color: white;
   border-radius: 20px;
 }
 
@@ -178,7 +178,7 @@ button:hover {
   overflow: hidden;
   position: relative;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px white;
 }
 
 .img-container img {
@@ -190,7 +190,7 @@ button:hover {
 
 .name-container h2 {
   margin-top: 5px;
-  text-decoration: underline 2px solid blue;
+  /* text-decoration: underline 2px solid blue; */
   text-align: center;
 }
 
@@ -258,6 +258,12 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.skills label{
+  font-size: 16px;
+  font-weight: bolder;
+  margin-top: 5px;
 }
 
 @media (max-width: 768px) {
@@ -583,4 +589,31 @@ button:hover {
   .proj-1 {
     padding: 5px;
   }
+}
+
+.footer-style{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  flex-direction: column;
+ 
+  span{
+    font-size: 25px;
+    width: 70%;
+  }
+
+}
+
+.signing-off{
+  margin: 50px;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }

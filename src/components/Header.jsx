@@ -5,7 +5,7 @@ import REACT from "../Image/react-1.svg";
 import JS from "../Image/javascript.png";
 import EXPRESS from "../Image/express-js.png";
 import MONGO from "../Image/mongodb.webp";
-import NODE from "../Image/mongodb.webp";
+import NODE from "../Image/Node.js_logo.svg.png";
 import CPP from "../Image/c++.png";
 import PROJ1 from "../Image/Screenshot from 2024-12-22 17-21-54.png";
 import PROJ2 from "../Image/Screenshot from 2024-12-22 17-50-34.png";
@@ -169,7 +169,13 @@ const Header = () => {
               <div className="lang-logo">
                 <img src={NODE} alt="ReactJS" />
               </div>
-              <label>NodeJS</label>
+              <label>ExpressJS</label>
+            </div>
+            <div>
+              <div className="lang-logo">
+                <img src={MONGO} alt="ReactJS" />
+              </div>
+              <label>MongoDB</label>
             </div>
             <div>
               <div className="lang-CPP">

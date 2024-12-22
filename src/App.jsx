@@ -8,6 +8,7 @@ import "./App.css";
 import Contact from "./components/Contact.jsx";
 import NavBar from "./NavBar.jsx";
 import ProjectWork from "./components/ProjectWork.jsx";
+import Footer from "./Footer.jsx";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/projects" element={<ProjectWork />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );
