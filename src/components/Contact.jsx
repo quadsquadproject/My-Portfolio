@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
-import './Contact.css'
+import "./Contact.css";
+import axios from "axios";
 
 const Contact = () => {
+  const [inputData, setInputData] = useState({
+    name: "",
+    email: "",
+    topic: "",
+    number: "",
+    subject: "",
+    message: "",
+  });
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    console.log(inputData)
+    axios.post('http://localhost:5500/datastore', {
+      name: name,
+      email: email,
+      number: number,
+      subject: subject,
+      message: message,
+    })
   };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setInputData({ ...inputData, [name]: value });
+  };
+
+  const { name, email,  number, subject, message } = inputData;
 
   return (
     <div>
       <section className="background-banner">
         <div className="contact-banner">
           <div className="details-content">
-            
             <div className="text-para">
               <p>
                 Please complete the form below and we will get back to you soon.
@@ -28,10 +52,22 @@ const Contact = () => {
             <form className="container-form" onSubmit={handleFormSubmit}>
               <div className="col-lg-1">
                 <div className="input_text">
-                  <input type="text" placeholder="Name*" />
+                  <input
+                    type="text"
+                    placeholder="Name*"
+                    name="name"
+                    value={name}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
-                  <input type="email" placeholder="Email*" />
+                  <input
+                    type="email"
+                    placeholder="Email*"
+                    name="email"
+                    value={email}
+                    onChange={handleInputChange}
+                  />
                 </div>
               </div>
               <div className="col-lg-2">
@@ -47,15 +83,32 @@ const Contact = () => {
                   </select>
                 </div>
                 <div>
-                  <input type="tel" placeholder="Phone Number" />
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    name="number"
+                    value={number}
+                    onChange={handleInputChange}
+                  />
                 </div>
               </div>
               <div className="col-lg-3">
                 <div>
-                  <input type="text" placeholder="subject *" />
+                  <input
+                    type="text"
+                    placeholder="subject *"
+                    name="subject"
+                    value={subject}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
-                  <textarea placeholder="Write a Message..." />
+                  <textarea
+                    placeholder="Write a Message..."
+                    name="message"
+                    value={message}
+                    onChange={handleInputChange}
+                  />
                 </div>
               </div>
               <div>
@@ -71,7 +124,8 @@ const Contact = () => {
                 <tr>
                   <td className="td-lg-1">Contact Us By Phone</td>
                   <td style={{ color: "orange", fontWeight: "bold" }}>
-                    <BsFillTelephoneFill style={{ color: "orange" }} /> 8310338347
+                    <BsFillTelephoneFill style={{ color: "orange" }} />{" "}
+                    8310338347
                   </td>
                 </tr>
                 <tr>
